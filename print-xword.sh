@@ -13,7 +13,7 @@ if [ -z "$NYT_COOKIE" ]; then
     echo "Your NYT_COOKIE can't be blank."
 else
     # Assemble URL for tomorrow's crossword
-    CROSSWORD_URL="$XWORD_PATH/$FILENAME"
+    CROSSWORD_URL="$URL_ROOT/$FILENAME"
 
     # Size check to determine if tomorrow's crossword is out yet
     SIZE_CHECK=$(curl -s -r 0-499 "$URL_ROOT" -b "$NYT_COOKIE")
@@ -21,7 +21,7 @@ else
         echo "Tomorrow's crossword is out! Printing it ..."
     else
         echo "Tomorrow's crossword isn't out yet. Printing today's ..."
-        CROSSWORD_URL="$XWORD_PATH/$TODAY_FILENAME"
+        CROSSWORD_URL="$URL_ROOT/$TODAY_FILENAME"
     fi
     
     # Download and print
