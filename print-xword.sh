@@ -16,7 +16,7 @@ else
     CROSSWORD_URL="$URL_ROOT/$FILENAME"
 
     # Size check to determine if tomorrow's crossword is out yet
-    SIZE_CHECK=$(curl -s -r 0-499 "$URL_ROOT" -b "$NYT_COOKIE")
+    SIZE_CHECK=$(curl -s -r 0-499 "$CROSSWORD_URL" -b "$NYT_COOKIE")
     if [ ${#SIZE_CHECK} -gt 500 ]; then
         echo "Tomorrow's crossword is out! Printing it ..."
     else
@@ -25,7 +25,7 @@ else
     fi
     
     # Download and print
-    curl -s "$CROSSWORD_URL" -b "$NYT_COOKIE" | lpr -o media=Letter -o fit-to-page
+    curl "$CROSSWORD_URL" -b "$NYT_COOKIE" | lpr -o media=Letter -o fit-to-page
     # Or use the below line you'd like to download the file without printing:
     # curl -s "$CROSSWORD_URL" -b "$NYT_COOKIE" -o "/your-download-path/$FILENAME"
 fi
