@@ -13,7 +13,7 @@ While logged into your account at https://www.nytimes.com/crosswords, open your 
 To manually run the script:
 
 ```
-bash print-xword.sh
+./print-xword.sh
 ```
 
 It should print, to your default printer, tomorrow's crossword if available (ie. it's after 10pm local time). Otherwise, it'll print the current day's crossword.
