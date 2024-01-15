@@ -55,4 +55,4 @@ lpr -P your-printer-name -o media=Letter -o fit-to-page
 `lpstat -p -d` will show a list printer names. See the [CUPS manual](https://www.cups.org/doc/options.html#PRINTER) for additional print options.
 
 ## Further notes
-The NYT cookie expires after some time (often months or longer). You'll have to update `NYT_COOKIE` with the new cookie when it does. Unfortunately, nytimes.com changed their login system a few years ago in a way that makes it difficult to fetch the cookie automatically from a username/password, hence this workaround.
+The NYT cookie expires after some time (often months or longer). You'll have to update `NYT_COOKIE` with the new cookie when it does. For a more elegant approach that just uses your username/password, [Bert Wagner has a neat tutorial](https://bertwagner.com/posts/using-curl-to-automate-multipage-logins/).
