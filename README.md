@@ -7,7 +7,7 @@ This script downloads the latest daily New York Times crossword and sends it to 
 
 ## Setup
 
-While logged into your account at https://www.nytimes.com/crosswords, open your browser's developer console and enter `document.cookies`. Copy the full cookie text into `NYT_COOKIE=""`
+While logged into your account at https://www.nytimes.com/crosswords, open your browser's developer console and enter `document.cookie`. Copy the full cookie text into `NYT_COOKIE=""`
 
 ## Testing the script
 To manually run the script:
