@@ -1,3 +1,5 @@
+Update 6/4/24: Something changed with the way NYT handles cookies and this method doesn't seem to work anymore. Will investigate further ...
+
 # Print XWord
 This script downloads the latest daily New York Times crossword and sends it to your printer.
 
